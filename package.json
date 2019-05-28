@@ -1,0 +1,51 @@
+{
+  "name": "react-native-spinkit-web",
+  "description": "Replacement for react-native-spinkit when targeting the web.",
+  "version": "1.0.0",
+  "author": "Loïc Mahieu <mahieuloic@gmail.com>",
+  "homepage": "https://github.com/LoicMahieu/react-native-spinkit-web",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LoicMahieu/react-native-spinkit-web.git"
+  },
+  "keywords": [
+    "react",
+    "react-native-web",
+    "spinkit",
+    "spinners"
+  ],
+  "license": "MIT",
+  "main": "lib/commonjs/index.js",
+  "module": "lib/module/index.js",
+  "react-native": "src/index.js",
+  "types": "lib/typescript/src/index.d.ts",
+  "files": [
+    "lib/",
+    "src/"
+  ],
+  "scripts": {
+    "build": "bob build",
+    "prepare": "yarn build"
+  },
+  "@react-native-community/bob": {
+    "source": "src",
+    "output": "lib",
+    "targets": [
+      [
+        "commonjs"
+      ],
+      "module",
+      "typescript"
+    ]
+  },
+  "devDependencies": {
+    "@react-native-community/bob": "^0.4.1",
+    "@types/react": "^16.8.18",
+    "@types/react-spinkit": "^3.0.5",
+    "react": "^16.8.6",
+    "typescript": "^3.4.5"
+  },
+  "dependencies": {
+    "react-spinkit": "^3.0.0"
+  }
+}
